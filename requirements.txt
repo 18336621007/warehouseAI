@@ -1,0 +1,7 @@
+pandas
+sqlalchemy
+pymysql
+langchain
+langchain-openai
+faiss-cpu
+python-dotenv
