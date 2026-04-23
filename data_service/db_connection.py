@@ -1,3 +1,5 @@
+"""数据库连接模块：初始化 SQLAlchemy 引擎与 LangChain SQLDatabase。"""
+
 from sqlalchemy import create_engine
 from langchain_community.utilities import SQLDatabase
 from configs.settings import Config

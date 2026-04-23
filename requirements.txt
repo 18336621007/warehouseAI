@@ -5,3 +5,5 @@ langchain
 langchain-openai
 faiss-cpu
 python-dotenv
+pyyaml
+sqlglot

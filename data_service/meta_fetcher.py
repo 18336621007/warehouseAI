@@ -1,7 +1,14 @@
+"""元数据采集模块：从 INFORMATION_SCHEMA 读取表和字段描述信息。"""
+
 import pandas as pd
 from data_service.db_connection import engine
 
+
 def fetch_metadata(database: str):
+    """按数据库名拉取表/字段注释与主键信息，供 RAG 建库使用。"""
+    if not database.replace("_", "").isalnum():
+        raise ValueError("database 名称非法。")
+
     sql = f"""
     SELECT
         t.TABLE_NAME,
